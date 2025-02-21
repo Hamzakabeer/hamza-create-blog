@@ -1,0 +1,144 @@
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    #mobile-menu {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    #user-menu {
+        right: 1rem; /* Adjust position on mobile if needed */
+    }
+}
+
+/* Emoji Picker Styles */
+#emoji-picker {
+    display: none;
+    z-index: 100;
+}
+
+#emoji-picker button {
+    font-size: 24px;
+    padding: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#emoji-picker button:hover {
+    background-color: #edf2f7;
+    border-radius: 4px;
+}
+
+/* Post Styles */
+.post-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 36rem; /* max-w-2xl */
+    margin: 0 auto; /* Center the post */
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.post-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.post-header .post-user-info {
+    margin-left: 10px;
+}
+
+.post-header .post-user-info h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.post-header .post-user-info span {
+    font-size: 12px;
+    color: #718096;
+}
+
+.post-content {
+    margin-bottom: 12px;
+    word-wrap: break-word;
+}
+
+.post-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #e53e3e;
+}
+
+.post-actions button:hover {
+    text-decoration: underline;
+}
+
+/* Custom Styles */
+#photo-preview img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Dropdown Menu */
+#user-menu {
+    display: none;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+/* Settings Modal Styles */
+#settings-modal {
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    display: none; /* Hidden by default */
+}
+
+#settings-modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+#settings-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#settings-modal-close:hover {
+    color: #e53e3e;
+}
