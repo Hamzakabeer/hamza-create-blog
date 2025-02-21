@@ -26,11 +26,13 @@ body {
     border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    display: none; /* Hide by default */
+    display: none;
+    /* Hide by default */
 }
 
 .container.active {
-    display: block; /* Show when active */
+    display: block;
+    /* Show when active */
 }
 
 /* Heading */
@@ -65,18 +67,18 @@ input:focus {
     border-color: #007bff;
     outline: none;
     text-align: left;
-  }
-  
-  input:focus::placeholder {
+}
+
+input:focus::placeholder {
     text-align: left;
-  }
-  
-  
-  /* Placeholder styling */
-  input::placeholder {
+}
+
+
+/* Placeholder styling */
+input::placeholder {
     color: #999;
     text-align: center;
-  }
+}
 
 /* Password wrapper */
 .password-wrapper {
@@ -84,16 +86,17 @@ input:focus {
 }
 
 .password-wrapper input {
-    padding-right: 40px; /* Space for the toggle icon */
+    padding-right: 40px;
+    /* Space for the toggle icon */
 }
 
 /* Toggle password icon */
 .toggle-password {
     position: absolute;
     right: 15px;
-    top: 50%;
+    top: 41.6%;
     transform: translateY(-50%);
-    font-size: 18px;
+    font-size: 10px;
     color: #555;
     cursor: pointer;
 }
@@ -154,11 +157,13 @@ button:hover {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 999;
-    display: none; /* Hide by default */
+    display: none;
+    /* Hide by default */
 }
 
 .popup-overlay.active {
-    display: block; /* Show when active */
+    display: block;
+    /* Show when active */
 }
 
 /* Custom popup */
@@ -175,11 +180,13 @@ button:hover {
     width: 90%;
     max-width: 400px;
     z-index: 1000;
-    display: none; /* Hide by default */
+    display: none;
+    /* Hide by default */
 }
 
 .custom-popup.active {
-    display: block; /* Show when active */
+    display: block;
+    /* Show when active */
 }
 
 /* Popup title */
@@ -225,37 +232,6 @@ button:hover {
 input.invalid {
     border-color: #e74c3c;
 }
-
-/* Dashboard styles */
-.dashboard-container {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.user-avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-top: 20px;
-    object-fit: cover;
-}
-
-#logout-btn {
-    margin-top: 30px;
-    padding: 10px 25px;
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#logout-btn:hover {
-    background-color: #c0392b;
-}
-
 
 /* Responsive adjustments */
 @media (max-width: 480px) {
