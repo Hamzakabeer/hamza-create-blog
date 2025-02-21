@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamza-Bloging-Post</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="blogmain.css">
+</head>
+<header class="bg-blue-600 text-white px-6 py-4 shadow-lg w-full">
+    <div class="flex items-center justify-between">
+
+        <a href="#" class="text-2xl font-bold">MyApp</a>
+
+        <nav class="hidden md:flex space-x-6">
+            <a href="#" class="hover:text-gray-200">Home</a>
+            <a href="#" class="hover:text-gray-200">Create Post</a>
+            <a href="#" class="hover:text-gray-200">Profile</a>
+            <a href="#" class="hover:text-gray-200">Settings</a>
+        </nav>
+
+
+        <button id="menu-toggle" class="block md:hidden">
+            <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+    </div>
+
+
+    <nav id="mobile-menu" class="hidden md:hidden mt-4">
+        <a href="#" class="block py-2 text-gray-100 hover:text-gray-200">Home</a>
+        <a href="#" class="block py-2 text-gray-100 hover:text-gray-200">Create Post</a>
+        <a href="#" class="block py-2 text-gray-100 hover:text-gray-200">Profile</a>
+        <a href="#" class="block py-2 text-gray-100 hover:text-gray-200">Settings</a>
+    </nav>
+</header>
+<br>
+<br>
+
+<body class="bg-gray-100 flex flex-col items-center py-6">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-96 relative">
+        <div class="flex items-center mb-4">
+            <img src="https://scontent.fkhi17-2.fna.fbcdn.net/v/t39.30808-1/465465333_1267209394276018_748927878396489759_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_ohc=vvqmV4ZlxrcQ7kNvgEUmBhB&_nc_oc=AdjqC2xcZCgC3TNFH226eYGRTgr-Cvu-2ONVPalDsrRK2_CGBSBO4VmlueCouCLZyUY&_nc_zt=24&_nc_ht=scontent.fkhi17-2.fna&_nc_gid=AznCfxIVwz7pXzVTDa3umjo&oh=00_AYBQ2BZxAfCpgeAUGCxjFvvEdMQO4AgyG8WH4LXhDVVqxQ&oe=67BCF7D0"
+                alt="Profile Picture" class="rounded-full w-10 h-10 mr-4">
+            <div>
+                <h2 class="text-gray-800 font-bold">Muhammad Hamza Kabeer</h2>
+                <select class="text-sm text-gray-600 border border-gray-300 rounded px-2 py-1">
+                    <option>Friends</option>
+                    <option>Public</option>
+                    <option>Only Me</option>
+                </select>
+            </div>
+        </div>
+
+        <textarea id="post-input" placeholder="What's on your mind, You?"
+            class="w-full border border-gray-300 rounded p-2 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            rows="3"></textarea>
+
+        <div class="flex overflow-x-auto mb-4 space-x-2">
+            <button class="w-10 h-10 rounded-full bg-white border border-gray-300"
+                onclick="changeBackground('white')"></button>
+            <button class="w-10 h-10 rounded-full bg-gradient-to-r from-green-400 to-blue-500"
+                onclick="changeBackground('linear-gradient(to right, #34d399, #3b82f6)')"></button>
+            <button class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-400 to-pink-500"
+                onclick="changeBackground('linear-gradient(to right, #a78bfa, #ec4899)')"></button>
+            <button class="w-10 h-10 rounded-full bg-gradient-to-r from-red-400 to-yellow-500"
+                onclick="changeBackground('linear-gradient(to right, #f87171, #fbbf24)')"></button>
+            <button class="w-10 h-10 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600"
+                onclick="changeBackground('linear-gradient(to right, #6366f1, #8b5cf6)')"></button>
+            <button class="w-10 h-10 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500"
+                onclick="changeBackground('linear-gradient(to right, #facc15, #fb923c)')"></button>
+            <input type="color" id="custom-color-picker"
+                class="w-10 h-10 rounded-full border border-gray-300 cursor-pointer"
+                onchange="changeBackground(this.value)">
+        </div>
+
+        <div class="flex flex-wrap items-center space-x-2">
+            <label class="flex items-center space-x-1 text-gray-600 hover:text-gray-800 cursor-pointer">
+                <input type="file" id="photo-upload" class="hidden" accept="image/*" onchange="handlePhotoUpload()">
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v4/y7/r/Ivw7nhRtXyo.png" alt="photo">
+                <span>Photo</span>
+            </label>
+
+            <button class="flex items-center space-x-1 text-gray-600 hover:text-gray-800">
+                <img src="https://static.xx.fbcdn.net/rsrc.php/v4/yq/r/b37mHA1PjfK.png" alt="tagpeople">
+                <span>Tag Friends</span>
+            </button>
+
+            <div class="relative">
+                <button class="flex items-center space-x-1 text-gray-600 hover:text-gray-800"
+                    onclick="toggleEmojiPicker()">
+                    <img src="https://static.xx.fbcdn.net/rsrc.php/v4/yd/r/Y4mYLVOhTwq.png" alt="emoji">
+                    <span>Emoji</span>
+                </button>
+                <div id="emoji-picker">
+                    <button onclick="addEmoji('😊')">😊</button>
+                    <button onclick="addEmoji('😂')">😂</button>
+                    <button onclick="addEmoji('❤️')">❤️</button>
+                    <button onclick="addEmoji('👍')">👍</button>
+                    <button onclick="addEmoji('🎉')">🎉</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="w-full mt-4 bg-blue-500 text-white rounded py-2 hover:bg-blue-600"
+            onclick="createPost()">Post</button>
+    </div>
+
+    <p class="text-center text-gray-600 text-sm mt-4">Powered by Muhammad Hamza Kabeer</p>
+
+
+    <div id="post-container" class="post-container"></div>
+
+    <script src="hamzablog.js"></script>
+</body>
+
+</html>
